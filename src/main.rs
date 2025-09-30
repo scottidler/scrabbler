@@ -3,7 +3,7 @@ use eyre::Result;
 
 /// Simple program to spell words in Scrabble format
 #[derive(Parser, Debug)]
-#[clap(author, version, about, long_about = None)]
+#[clap(author, version = env!("GIT_DESCRIBE"), about, long_about = None)]
 struct Args {
     /// The words to be spelled in Scrabble format
     words: Vec<String>,
