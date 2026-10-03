@@ -16,10 +16,12 @@ fn main() -> Result<()> {
     let scrabble_sentence = input
         .chars()
         .filter(|c| c.is_alphabetic() || c.is_whitespace())
-        .map(|c| if c.is_whitespace() {
-            " ".to_string()
-        } else {
-            format!(":scrabble-{}:", c.to_lowercase())
+        .map(|c| {
+            if c.is_whitespace() {
+                " ".to_string()
+            } else {
+                format!(":scrabble-{}:", c.to_lowercase())
+            }
         })
         .collect::<Vec<String>>()
         .join("");
@@ -28,4 +30,3 @@ fn main() -> Result<()> {
 
     Ok(())
 }
-
