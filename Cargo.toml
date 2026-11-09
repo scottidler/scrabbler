@@ -7,3 +7,6 @@ build = "build.rs"
 [dependencies]
 clap = { version = "4.5.5", features = ["derive"] }
 eyre = "0.6.12"
+
+[build-dependencies]
+build-version = { git = "https://github.com/tatari-tv/build-version-rs", tag = "v0.1.0", version = "0.1.0" }
